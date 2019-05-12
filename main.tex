@@ -1,33 +1,38 @@
-% Template created by Ariel Soto-Caro (2019) for personal use.
-% Is not an official template.
-% arielsotocaro@gmail.com & asotocaro@ufl.edu
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template created by Ariel Soto-Caro, Jan-2019.
+% Last update: May-2019.
+% Contact: asotocaro@ufl.edu & arielsotocaro@gmail.com
+% This template is also available at github:
+% https://github.com/ArielSotoCaro/FRED_beamer_theme/
+%
+% DISCLAIMER: This is not an official FRED template.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ---------------------------------------
 \documentclass[aspectratio=169]{beamer}
 \usepackage{UFtheme}
-%
+% ---------------------------------------
 
 %% ===========================================
 %% ===========================================
-\title{\huge Main Topic}
+\title[short title]{\huge Main Title}
 \author{First Author \& Second Author}
 \institute{Food and Resource Economics Department}
 \date{\today}
 %% ===========================================
 %% ===========================================
+% Don't change this part.
 \begin{document}
-
 
 \begin{frame}[plain]
     \titlepage
 \end{frame}
 %% ===========================================
 %% ===========================================
-
 % Uncomment these lines for an automatically generated outline.
 %\begin{frame}{Outline}
 %  \tableofcontents
 %\end{frame}
-
-
 %% ===========================================
 %% ===========================================
 %	PRESENTATION SLIDES
@@ -68,21 +73,31 @@ Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. A
 
 %% ===========================================
 %% ===========================================
+\section{Second Section} 
+%% ===========================================
+%% ===========================================
 
 \begin{frame}
 \frametitle{Blocks of Highlighted Text}
-\begin{block}{Block 1}
+\begin{block}{Regular Block}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
 \end{block}
 
-\begin{block}{Block 2}
+\begin{exampleblock}{Example Block}
 Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
-\end{block}
+\end{exampleblock}
 
-\begin{block}{Block 3}
+\begin{alertblock}{Alert Block}
 Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-\end{block}
+\end{alertblock}
 \end{frame}
+
+%% ===========================================
+%% ===========================================
+
+%% ===========================================
+\subsection{Using columns}
+%% ===========================================
 
 %% ===========================================
 %% ===========================================
@@ -107,8 +122,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 
 %% ===========================================
 %% ===========================================
-\section{Second Section}
+\section{Third Section}
 %% ===========================================
+%% ===========================================
+
+%% ===========================================
+\subsection{Tables and elements}
 %% ===========================================
 
 \begin{frame}
@@ -130,60 +149,65 @@ Treatment 3 & 0.0009271 & 0.296 \\ \hline
 
 \begin{frame}
 \frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
+\begin{theorem}[Arrow's impossibility]
+Let $A$ be a set of outcomes, $N$ a number of voters or decision criteria. We shall denote the set of all full linear orderings of $A$ by $L(A)$.\\~\\
+
+A (strict) social welfare function (preference aggregation rule) is a function
+\begin{equation}
+    F: L(A)^N \longrightarrow L(A)
+\end{equation}
+which aggregates voters' preferences into a single preference order on $A$.
 \end{theorem}
 \end{frame}
 
 %% ===========================================
 %% ===========================================
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
+%% ===========================================
+\subsection{Econometrics}
+%% ===========================================
+
+%% ===========================================
+%% ===========================================
+
 \begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
+\frametitle{Common Econometrics symbols}
+
+\begin{equation}
+    \Avar (b) = \frac{\sigma^2}{n} Q^{-1} \plim \left( \frac{1}{n}X'QX \right)Q^{-1}
+\end{equation}
+
+\begin{equation}
+    \sqrt{n}(b-\beta) \stackrel{d}{\longrightarrow} \N \left[0,\frac{\sigma^2}{n} Q^{-1} \plim \left( \frac{1}{n}X'\Omega X\right)Q^{-1}\right]
+\end{equation}
+
+Also, you can use the following symbols or operators:
+\begin{itemize}
+    \item $\E(\cdot)$, $\V(\cdot)$, $\Var(\cdot)$, $\Cov(\cdot)$, $\Corr(\cdot)$, $\tr(\cdot)$, $\rank(\cdot)$, $\N(0,1)$, $\op(\cdot)$, $\Op(\cdot)$, $\R^+$, and $\La(y,x|\beta,\sigma^2)$.
+    \item $\hat \beta$, $\widehat \beta$, $\tilde \alpha$, $\widetilde \alpha$, $\bar y$, $\varepsilon \sim \chi^2_t$
+\end{itemize}
+
 \end{frame}
+
+%% ===========================================
+%% ===========================================
+\section{Fourth Section}
+%% ===========================================
+%% ===========================================
+
+%% ===========================================
+\subsection{Figures}
+%% ===========================================
 
 %% ===========================================
 %% ===========================================
 
 \begin{frame}
 \frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
 
-%% ===========================================
-%% ===========================================
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%% ===========================================
-%% ===========================================
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
+\begin{figure}
+    \includegraphics[scale=.6]{fig1}
+\end{figure}
 \end{frame}
 
 %% ===========================================
